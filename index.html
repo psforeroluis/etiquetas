@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preparar etiquetas para imprimir</title>
+</head>
+<body>
+    <button onclick="ejecutarScript()">Procesar etiquetas</button>
+    <script>
+        function ejecutarScript() {
+            fetch('https://script.google.com/macros/s/AKfycbyUl2_jF2LC9cQT2ImQoAHcPPq_N_NB11lky7e2Ma7JHcelL6F3JVBJ-QGKleR6MX7cSA/exec', {
+                method: 'POST',
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => alert('Error: ' + error));
+        }
+    </script>
+</body>
+</html>
